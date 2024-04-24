@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image/svg" href="resources/files/favicon/favicon.svg" rel="shortcut icon" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#111111" />
+    <title>Weather</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <main class="main">
+      <h1 class="title">Pet project: Weather</h1>
+      <section class="weather">
+        <div class="container">
+          <div class="weather__wrap">
+            <div class="weather__inner">
+              <div class="weather__search box">
+                <form class="weather__form" method="post" action="#/">
+                  <label class="weather__label" for="search">
+                    <input class="weather__input" id="search" name="search" type="text" placeholder="Search" required />
+                    <button class="weather__btn btn-reset">
+                      <svg class="weather__icon">
+                        <use href="resources/icons/sprite.svg#search"></use>
+                      </svg>
+                    </button>
+                  </label>
+                </form>
+                <div class="weather__content">
+                  <div class="weather__subinner">
+                    <div class="weather__col">
+                      <p class="weather__search-text weather__search-text--font-more">Weather in</p>
+                      <div class="weather__city">
+                        <span class="weather__city-name">Barnaul</span>
+                        <button class="weather__city-btn btn-reset">
+                          <svg class="weather__city-icon">
+                            <use href="resources/icons/sprite.svg#heart"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="weather__col">
+                      <img class="weather__img" src="resources/img/cloud.png" alt="Weather icon" />
+                      <p class="weather__search-text weather__search-text--font-more">Clouds</p>
+                    </div>
+                  </div>
+                  <div class="weather__subinner">
+                    <div class="weather__col">
+                      <span class="weather__degree">20</span>
+                      <p class="weather__search-text">Weather now</p>
+                    </div>
+                    <div class="weather__col">
+                      <span class="weather__degree">18</span>
+                      <p class="weather__search-text">Feels like</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="weather__details box">
+                <div class="weather__inner-title weather__inner-title--bkg-dark">
+                  <h2 class="weather__title weather__title--color-light">Details</h2>
+                </div>
+                <div class="weather__content">
+                  <div class="weather__subinner">
+                    <div class="weather__details-inner">
+                      <svg class="weather__details-icon">
+                        <use href="resources/icons/sprite.svg#wind"></use>
+                      </svg>
+                      <div class="weather__col">
+                        <span class="weather__details-text text">11km/h</span>
+                        <p class="weather__text">Wind speed</p>
+                      </div>
+                    </div>
+                    <div class="weather__details-inner">
+                      <svg class="weather__details-icon weather__details-icon--humidity">
+                        <use href="resources/icons/sprite.svg#humidity"></use>
+                      </svg>
+                      <div class="weather__col">
+                        <span class="weather__details-text text">31%</span>
+                        <p class="weather__text">Humidity</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="weather__subinner">
+                    <div class="weather__details-inner">
+                      <svg class="weather__details-icon weather__details-icon--sunset">
+                        <use href="resources/icons/sprite.svg#sunset"></use>
+                      </svg>
+                      <div class="weather__col">
+                        <span class="weather__details-text text">18:54</span>
+                        <p class="weather__text">Sunset</p>
+                      </div>
+                    </div>
+                    <div class="weather__details-inner">
+                      <svg class="weather__details-icon weather__details-icon--sunrise">
+                        <use href="resources/icons/sprite.svg#sunrise"></use>
+                      </svg>
+                      <div class="weather__col">
+                        <span class="weather__details-text text">03:21</span>
+                        <p class="weather__text">Sunrise</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="weather__inner">
+              <div class="weather__favorites box">
+                <div class="weather__inner-title">
+                  <h2 class="weather__title">Favorites</h2>
+                </div>
+                <ul class="weather__favorites-list list-reset">
+                  <li class="weather__favorites-item">
+                    <span class="weather__city-name">Barnaul</span>
+                    <button class="weather__delete btn-reset"></button>
+                  </li>
+                  <li class="weather__favorites-item">
+                    <span class="weather__city-name">Krasnoyarsk</span>
+                    <button class="weather__delete btn-reset"></button>
+                  </li>
+                  <li class="weather__favorites-item">
+                    <span class="weather__city-name">Yaroslavl</span>
+                    <button class="weather__delete btn-reset"></button>
+                  </li>
+                </ul>
+              </div>
+              <div class="weather__forecast box">
+                <div class="weather__inner-title">
+                  <h2 class="weather__title">Forecast</h2>
+                </div>
+                <ul class="weather__forecast-list list-reset">
+                  <li class="weather__forecast-item">
+                    <div class="weather__forecast-subinner">
+                      <span class="weather__date text">25 May</span>
+                      <span class="weather__time">12:00</span>
+                    </div>
+                    <div class="weather__forecast-subinner">
+                      <div class="weather__col">
+                        <p class="weather__forecast-text text">Temperature: 13</p>
+                        <p class="weather__forecast-text text">Feels like: 8</p>
+                      </div>
+                      <div class="weather__col">
+                        <img class="weather__forecast-img" src="resources/img/rain.png" alt="Weather type" />
+                        <span class="weather__forecast-text text weather__forecast-text--font-less">Rain</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <template id="favorites-item">
+      <li class="weather__favorites-item">
+        <span class="weather__city-name"></span>
+        <div class="weather__delete"></div>
+      </li>
+    </template>
+    <template id="forecast-item">
+      <li class="weather__item">
+        <div class="weather__subinner">
+          <span class="weather__date text"></span>
+          <div class="weather__col">
+            <p class="weather__forecast-text text"></p>
+            <p class="weather__forecast-text text"></p>
+          </div>
+        </div>
+        <div class="weather__subinner">
+          <span class="weather__time"></span>
+          <div class="weather__col">
+            <img class="weather__forecast-img" src="resources/img/rain.png" alt="Weather type" />
+            <span class="weather__forecast-text text weather__forecast-text--font-less"></span>
+          </div>
+        </div>
+      </li>
+    </template>
+    <script src="js/scripts.js" type="module"></script>
+  </body>
+</html>

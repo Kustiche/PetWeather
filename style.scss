@@ -1,0 +1,16 @@
+// * Global styles (Шрифты, переменные, сбросы)
+@import "scss/libs/normalize";
+@import "scss/vars";
+@import "scss/fonts";
+@import "scss/settings";
+@import "scss/interface";
+
+// * Libs styles
+// @import "libs/animate";
+
+// * Подключение стилей swiper-слайдера
+// @import "libs/swiper-bundle.min";
+// @import "components/sliders";
+
+// * Main styles
+@import "scss/chunk/weather";
