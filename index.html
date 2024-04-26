@@ -44,16 +44,21 @@
                     </div>
                     <div class="weather__col">
                       <img class="weather__img" src="resources/img/cloud.png" alt="Weather icon" />
-                      <p class="weather__search-text weather__search-text--font-more">Clouds</p>
+                      <p
+                        class="weather__search-text weather__search-text--font-more"
+                        data-text-weather-type="Weather type"
+                      >
+                        Clouds
+                      </p>
                     </div>
                   </div>
                   <div class="weather__subinner">
                     <div class="weather__col">
-                      <span class="weather__degree">20</span>
+                      <span class="weather__degree" data-degree="Weather now">20</span>
                       <p class="weather__search-text">Weather now</p>
                     </div>
                     <div class="weather__col">
-                      <span class="weather__degree">18</span>
+                      <span class="weather__degree" data-degree="Feels like">18</span>
                       <p class="weather__search-text">Feels like</p>
                     </div>
                   </div>
@@ -70,7 +75,7 @@
                         <use href="resources/icons/sprite.svg#wind"></use>
                       </svg>
                       <div class="weather__col">
-                        <span class="weather__details-text text">11km/h</span>
+                        <span class="weather__details-text text" data-details-text="Wind speed">11km/h</span>
                         <p class="weather__text">Wind speed</p>
                       </div>
                     </div>
@@ -79,7 +84,7 @@
                         <use href="resources/icons/sprite.svg#humidity"></use>
                       </svg>
                       <div class="weather__col">
-                        <span class="weather__details-text text">31%</span>
+                        <span class="weather__details-text text" data-details-text="Humidity">31%</span>
                         <p class="weather__text">Humidity</p>
                       </div>
                     </div>
@@ -90,7 +95,7 @@
                         <use href="resources/icons/sprite.svg#sunset"></use>
                       </svg>
                       <div class="weather__col">
-                        <span class="weather__details-text text">18:54</span>
+                        <span class="weather__details-text text" data-details-text="Sunset">18:54</span>
                         <p class="weather__text">Sunset</p>
                       </div>
                     </div>
@@ -99,7 +104,7 @@
                         <use href="resources/icons/sprite.svg#sunrise"></use>
                       </svg>
                       <div class="weather__col">
-                        <span class="weather__details-text text">03:21</span>
+                        <span class="weather__details-text text" data-details-text="Sunrise">03:21</span>
                         <p class="weather__text">Sunrise</p>
                       </div>
                     </div>
