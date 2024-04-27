@@ -1,7 +1,13 @@
-import { city, degrees, weatherType, searchTexts, detailsTexts } from "./view.js";
+import { cities, degrees, weatherType, searchTexts, detailsTexts } from "./view.js";
 
 export function fillingSearchInformation(cityName, temp, feelsLike, iconCode, nameWeatherType) {
-  city.textContent = cityName;
+  cities.forEach((element) => {
+    const isSearchCityName = element.dataset.cityName === "Search box";
+
+    if (isSearchCityName) {
+      element.textContent = cityName;
+    }
+  });
 
   degrees.forEach((element) => {
     const isDegreeWeatherNow = element.dataset.degree === "Weather now";

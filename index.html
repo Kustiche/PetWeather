@@ -34,7 +34,7 @@
                     <div class="weather__col">
                       <p class="weather__search-text weather__search-text--font-more">Weather in</p>
                       <div class="weather__city">
-                        <span class="weather__city-name">Barnaul</span>
+                        <span class="weather__city-name" data-city-name="Search box">Barnaul</span>
                         <button class="weather__city-btn btn-reset">
                           <svg class="weather__city-icon">
                             <use href="resources/icons/sprite.svg#heart"></use>
@@ -162,8 +162,8 @@
     </main>
     <template id="favorites-item">
       <li class="weather__favorites-item">
-        <span class="weather__city-name"></span>
-        <div class="weather__delete"></div>
+        <span class="weather__city-name" data-city-name="Template city name"></span>
+        <button class="weather__delete btn-reset"></button>
       </li>
     </template>
     <template id="forecast-item">

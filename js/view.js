@@ -1,9 +1,10 @@
-export const url = "https://api.openweathermap.org/data/2.5/weather";
-export const key = "33103c756038e60691b051e1c6d85024";
 export const form = document.querySelector(".weather__form");
 export const formInput = document.querySelector(".weather__input");
-export const city = document.querySelector(".weather__city-name");
+export const cities = document.querySelectorAll(".weather__city-name");
 export const degrees = document.querySelectorAll(".weather__degree");
 export const weatherType = document.querySelector(".weather__img");
 export const searchTexts = document.querySelectorAll(".weather__search-text");
 export const detailsTexts = document.querySelectorAll(".weather__details-text");
+export const favoritesButton = document.querySelector(".weather__city-btn");
+export const favoritesList = document.querySelector(".weather__favorites-list");
+export const favoritesItem = document.querySelector("#favorites-item");
