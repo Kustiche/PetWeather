@@ -140,6 +140,7 @@
   &__city-name {
     line-height: 17px;
     color: var(--light-color);
+    text-transform: capitalize;
   }
 
   &__city-btn {

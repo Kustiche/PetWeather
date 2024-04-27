@@ -542,6 +542,7 @@ img {
 .weather__city-name {
   line-height: 17px;
   color: var(--light-color);
+  text-transform: capitalize;
 }
 .weather__city-btn {
   position: absolute;
