@@ -6,7 +6,7 @@ export function addFavoritesCollection() {
   cities.forEach((element) => {
     const isSearchCityName = element.dataset.cityName === "Search box";
 
-    if (isSearchCityName && element.textContent !== "") {
+    if (isSearchCityName && element.textContent !== "City name") {
       favoritesCollection.add(element.textContent);
     }
   });

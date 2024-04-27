@@ -40,7 +40,6 @@ export function search(cityName) {
       fillingDetailsInformation(speed, humidity, timeSunset, timeSunrise);
     })
     .catch(() => {
-      cityName = "";
       alert(`${messengError.name} ${messengError.messenge}`);
     });
 }
