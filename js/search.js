@@ -7,7 +7,7 @@ export let timeSunrise = "";
 
 const key = "33103c756038e60691b051e1c6d85024";
 const url = "https://api.openweathermap.org/data/2.5/weather";
-const forecastUrl = "http://api.openweathermap.org/data/2.5/forecast";
+const forecastUrl = "https://api.openweathermap.org/data/2.5/forecast";
 const messengError = {
   name: "Error,",
   messenge: "try again",
