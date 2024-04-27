@@ -657,6 +657,7 @@ img {
   justify-content: space-between;
   margin-bottom: 15px;
   width: 100%;
+  cursor: pointer;
 }
 .weather__favorites-item:last-child {
   margin-bottom: 0;

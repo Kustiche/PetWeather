@@ -123,24 +123,7 @@
                 <div class="weather__inner-title">
                   <h2 class="weather__title">Forecast</h2>
                 </div>
-                <ul class="weather__forecast-list list-reset">
-                  <li class="weather__forecast-item">
-                    <div class="weather__forecast-subinner">
-                      <span class="weather__date text">25 May</span>
-                      <span class="weather__time">12:00</span>
-                    </div>
-                    <div class="weather__forecast-subinner">
-                      <div class="weather__col">
-                        <p class="weather__forecast-text text">Temperature: 13</p>
-                        <p class="weather__forecast-text text">Feels like: 8</p>
-                      </div>
-                      <div class="weather__col">
-                        <img class="weather__forecast-img" src="resources/img/rain.png" alt="Weather type" />
-                        <span class="weather__forecast-text text weather__forecast-text--font-less">Rain</span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+                <ul class="weather__forecast-list list-reset"></ul>
               </div>
             </div>
           </div>
@@ -154,19 +137,22 @@
       </li>
     </template>
     <template id="forecast-item">
-      <li class="weather__item">
-        <div class="weather__subinner">
+      <li class="weather__forecast-item">
+        <div class="weather__forecast-subinner">
           <span class="weather__date text"></span>
-          <div class="weather__col">
-            <p class="weather__forecast-text text"></p>
-            <p class="weather__forecast-text text"></p>
-          </div>
-        </div>
-        <div class="weather__subinner">
           <span class="weather__time"></span>
+        </div>
+        <div class="weather__forecast-subinner">
           <div class="weather__col">
-            <img class="weather__forecast-img" src="resources/img/rain.png" alt="Weather type" />
-            <span class="weather__forecast-text text weather__forecast-text--font-less"></span>
+            <p class="weather__forecast-text text" data-forecast-text="Temperature"></p>
+            <p class="weather__forecast-text text" data-forecast-text="Feels like"></p>
+          </div>
+          <div class="weather__col">
+            <img class="weather__forecast-img" src="resources/img/cloud.png" alt="Weather type" />
+            <span
+              class="weather__forecast-text text weather__forecast-text--font-less"
+              data-forecast-text="Weather type"
+            ></span>
           </div>
         </div>
       </li>
