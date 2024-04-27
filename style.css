@@ -695,6 +695,10 @@ img {
   width: 100%;
   min-height: 110px;
   max-height: 110px;
+  gap: 10px;
+}
+.weather__forecast-list::-webkit-scrollbar {
+  display: none;
 }
 .weather__forecast-item {
   display: flex;
@@ -719,16 +723,30 @@ img {
   line-height: 14px;
 }
 .weather__forecast-text {
+  position: relative;
   margin: 0;
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 12px;
+}
+.weather__forecast-text::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid var(--mine-shaft-color);
+  top: 0;
+  right: -6px;
 }
 .weather__forecast-text:last-child {
   margin-bottom: 0;
 }
 .weather__forecast-text--font-less {
   font-size: 13px;
+}
+.weather__forecast-text--font-less::after {
+  display: none;
 }
 .weather__time {
   line-height: 14px;

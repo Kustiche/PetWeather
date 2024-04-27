@@ -322,6 +322,11 @@
     width: 100%;
     min-height: 110px;
     max-height: 110px;
+    gap: 10px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__forecast-item {
@@ -351,10 +356,22 @@
   }
 
   &__forecast-text {
+    position: relative;
     margin: 0;
     margin-bottom: 10px;
     font-size: 16px;
     line-height: 12px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      border: 2px solid var(--mine-shaft-color);
+      top: 0;
+      right: -6px;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -362,6 +379,10 @@
 
     &--font-less {
       font-size: 13px;
+
+      &::after {
+        display: none;
+      }
     }
   }
 
