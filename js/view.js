@@ -10,3 +10,4 @@ export const favoritesList = document.querySelector(".weather__favorites-list");
 export const forecastList = document.querySelector(".weather__forecast-list");
 export const favoritesItem = document.querySelector("#favorites-item");
 export const forecastItem = document.querySelector("#forecast-item");
+export const modalError = document.querySelector(".modal-error");
