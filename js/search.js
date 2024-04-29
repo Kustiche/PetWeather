@@ -6,8 +6,8 @@ const key = "33103c756038e60691b051e1c6d85024";
 const url = "https://api.openweathermap.org/data/2.5/weather";
 const forecastUrl = "https://api.openweathermap.org/data/2.5/forecast";
 const messengError = {
-  name: "Error,",
-  messenge: "try again",
+  name: "Error, ",
+  messenge: "incorrect city name.",
 };
 
 export async function search(cityName) {
@@ -28,10 +28,10 @@ export async function search(cityName) {
     } = data;
     const { main: nameWeatherType, icon: iconCode } = weather;
 
+    renderForecast();
+
     fillingSearchInformation(cityName, temp, feelsLike, iconCode, nameWeatherType);
     fillingDetailsInformation(speed, humidity, sunset, sunrise);
-
-    renderForecast();
 
     for (let i = 0; i <= 6; i++) {
       const {
@@ -43,7 +43,7 @@ export async function search(cityName) {
 
       addForecastCollection(date, temp, feelsLike, nameWeatherType, iconCode);
     }
-  } catch (error) {
-    alert(`${messengError.name} ${messengError.messenge}`);
+  } catch {
+    alert(messengError.name + messengError.messenge);
   }
 }
