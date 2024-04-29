@@ -1,5 +1,20 @@
 import { cities, degrees, weatherType, searchTexts, detailsTexts } from "./view.js";
 
+let timeSunset = "";
+let timeSunrise = "";
+
+function timeConversion(sunset, sunrise) {
+  const dateSunset = new Date(sunset * 1000);
+  const dateSunrise = new Date(sunrise * 1000);
+  const hoursSunset = dateSunset.getHours() < 10 ? "0" + dateSunset.getHours() : dateSunset.getHours();
+  const minutesSunset = dateSunset.getMinutes() < 10 ? "0" + dateSunset.getMinutes() : dateSunset.getMinutes();
+  const hoursSunrise = dateSunrise.getHours() < 10 ? "0" + dateSunrise.getHours() : dateSunrise.getHours();
+  const minutesSunrise = dateSunrise.getMinutes() < 10 ? "0" + dateSunrise.getMinutes() : dateSunrise.getMinutes();
+
+  timeSunset = `${hoursSunset}:${minutesSunset}`;
+  timeSunrise = `${hoursSunrise}:${minutesSunrise}`;
+}
+
 export function fillingSearchInformation(cityName, temp, feelsLike, iconCode, nameWeatherType) {
   cities.forEach((element) => {
     const isSearchCityName = element.dataset.cityName === "Search box";
@@ -38,14 +53,16 @@ export function fillingDetailsInformation(speed, humidity, sunset, sunrise) {
     const isSunsetText = element.dataset.detailsText === "Sunset";
     const isSunriseText = element.dataset.detailsText === "Sunrise";
 
+    timeConversion(sunset, sunrise);
+
     if (isWindSpeedText) {
       element.textContent = `${speed}km/h`;
     } else if (isHumidityText) {
       element.textContent = `${humidity}%`;
     } else if (isSunsetText) {
-      element.textContent = `${sunset}`;
+      element.textContent = `${timeSunset}`;
     } else if (isSunriseText) {
-      element.textContent = `${sunrise}`;
+      element.textContent = `${timeSunrise}`;
     }
   });
 }
