@@ -11,4 +11,6 @@ export function gettingCityName(e) {
   if (isString) {
     cityName = name.toLowerCase();
   }
+
+  formInput.value = "";
 }
