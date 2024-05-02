@@ -31,7 +31,6 @@ export function addFavorites() {
   favoritesCollection.forEach((element) => {
     favorites.unshift(element);
   });
-  console.log(favorites);
 
   favorites.forEach((element) => {
     const favorit = favoritesItem.content.cloneNode(true);
