@@ -12,8 +12,8 @@ form.addEventListener("submit", (e) => {
   search(cityName);
 });
 
-favoritesButton.addEventListener("click", () => {
-  addFavoritesCollection();
+favoritesButton.addEventListener("click", (e) => {
+  addFavoritesCollection(e);
   renderFavorites();
 });
 
