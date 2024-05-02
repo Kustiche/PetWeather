@@ -149,16 +149,23 @@
     top: 50%;
     line-height: 0;
     transform: translateY(-50%);
+    transition: transform 0.4s;
+
+    &:hover {
+      transform: translateY(-50%) scale(0.9);
+    }
   }
 
   &__city-icon {
     width: 24px;
     height: 23px;
-    fill: var(--light-color);
-    transition: transform 0.4s;
+    background-image: url("../../resources/icons/heart.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-    &:hover {
-      transform: scale(0.9);
+    &.active {
+      background-image: url("../../resources/icons/favorite-heart.svg");
     }
   }
 

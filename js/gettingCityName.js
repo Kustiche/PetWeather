@@ -1,15 +1,22 @@
-import { formInput } from "./view.js";
+import { favoritesCollection } from "./addFavorites.js";
+import { favoritesButtonIcon, formInput } from "./view.js";
 
 export let cityName = "";
 
 export function gettingCityName(e) {
   e.preventDefault();
 
-  const name = formInput.value;
-  const isString = isNaN(formInput.value);
+  const name = formInput.value.toLowerCase();
+  const isString = isNaN(name);
+  const isCityFavorit = favoritesCollection.has(name);
 
-  if (isString) {
-    cityName = name.toLowerCase();
+  if (isString && isCityFavorit) {
+    cityName = name;
+
+    favoritesButtonIcon.classList.add("active");
+  } else if (isString) {
+    cityName = name;
+    favoritesButtonIcon.classList.remove("active");
   }
 
   formInput.value = "";

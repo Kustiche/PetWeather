@@ -599,15 +599,21 @@ img {
   top: 50%;
   line-height: 0;
   transform: translateY(-50%);
+  transition: transform 0.4s;
+}
+.weather__city-btn:hover {
+  transform: translateY(-50%) scale(0.9);
 }
 .weather__city-icon {
   width: 24px;
   height: 23px;
-  fill: var(--light-color);
-  transition: transform 0.4s;
+  background-image: url("../../resources/icons/heart.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-.weather__city-icon:hover {
-  transform: scale(0.9);
+.weather__city-icon.active {
+  background-image: url("../../resources/icons/favorite-heart.svg");
 }
 .weather__img {
   margin-bottom: 10px;
