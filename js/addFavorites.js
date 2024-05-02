@@ -13,7 +13,15 @@ export function addFavoritesCollection() {
 }
 
 export function addFavorites() {
+  const favorites = [];
+
   favoritesCollection.forEach((element) => {
+    favorites.push(element);
+  });
+
+  favorites.reverse();
+
+  favorites.forEach((element) => {
     const favorit = favoritesItem.content.cloneNode(true);
 
     favorit.querySelector(".weather__city-name").textContent = element;
