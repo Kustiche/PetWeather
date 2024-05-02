@@ -3,20 +3,24 @@ import { cities, favoritesButtonIcon, favoritesItem, favoritesList } from "./vie
 
 export const favoritesCollection = new Set();
 
-export function addFavoritesCollection(e) {
+export function checkFavoriteCity(name) {
+  const isCollectionCityName = favoritesCollection.has(name);
+
+  if (isCollectionCityName) {
+    favoritesButtonIcon.classList.remove("active");
+    deleteFavorites(name);
+  } else {
+    favoritesButtonIcon.classList.add("active");
+    favoritesCollection.add(name);
+  }
+}
+
+export function addFavoritesCollection() {
   cities.forEach((element) => {
     const isSearchCityName = element.dataset.cityName === "Search box";
-    const isCollectionCityName = favoritesCollection.has(element.textContent);
 
     if (isSearchCityName && element.textContent !== "City name") {
-      favoritesCollection.add(element.textContent);
-    }
-
-    if (isCollectionCityName) {
-      favoritesButtonIcon.classList.remove("active");
-      deleteFavorites(e, element.textContent);
-    } else {
-      favoritesButtonIcon.classList.add("active");
+      checkFavoriteCity(element.textContent);
     }
   });
 }
@@ -27,6 +31,7 @@ export function addFavorites() {
   favoritesCollection.forEach((element) => {
     favorites.unshift(element);
   });
+  console.log(favorites);
 
   favorites.forEach((element) => {
     const favorit = favoritesItem.content.cloneNode(true);

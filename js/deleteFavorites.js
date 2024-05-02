@@ -1,19 +1,19 @@
-import { favoritesCollection } from "./addFavorites.js";
+import { checkFavoriteCity, favoritesCollection } from "./addFavorites.js";
 import { renderFavorites } from "./renders.js";
 
-export function deleteFavorites(e, name) {
+export function gettingName(e) {
   const isDeleteButton = e.target.className === "weather__delete btn-reset";
 
   if (isDeleteButton) {
     const favorit = e.target.closest(".weather__favorites-item");
     const favoritText = favorit.querySelector(".weather__city-name");
 
-    favoritesCollection.delete(favoritText.textContent);
-
-    renderFavorites();
-  } else {
-    favoritesCollection.delete(name);
-
-    renderFavorites();
+    checkFavoriteCity(favoritText.textContent);
   }
+}
+
+export function deleteFavorites(name) {
+  favoritesCollection.delete(name);
+
+  renderFavorites();
 }
