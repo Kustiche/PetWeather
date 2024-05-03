@@ -159,13 +159,13 @@
   &__city-icon {
     width: 24px;
     height: 23px;
-    background-image: url("../../resources/icons/heart.svg");
+    background-image: url("resources/icons/heart.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
     &.active {
-      background-image: url("../../resources/icons/favorite-heart.svg");
+      background-image: url("resources/icons/favorite-heart.svg");
     }
   }
 

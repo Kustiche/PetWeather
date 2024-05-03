@@ -607,13 +607,13 @@ img {
 .weather__city-icon {
   width: 24px;
   height: 23px;
-  background-image: url("../../resources/icons/heart.svg");
+  background-image: url("resources/icons/heart.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .weather__city-icon.active {
-  background-image: url("../../resources/icons/favorite-heart.svg");
+  background-image: url("resources/icons/favorite-heart.svg");
 }
 .weather__img {
   margin-bottom: 10px;
