@@ -276,6 +276,7 @@
     width: 100%;
     min-height: 95px;
     max-height: 95px;
+    scrollbar-width: none;
   }
 
   &__favorites-item {
@@ -331,10 +332,7 @@
     min-height: 110px;
     max-height: 110px;
     gap: 10px;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    scrollbar-width: none;
   }
 
   &__forecast-item {

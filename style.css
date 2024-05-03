@@ -706,6 +706,7 @@ img {
   width: 100%;
   min-height: 95px;
   max-height: 95px;
+  scrollbar-width: none;
 }
 .weather__favorites-item {
   display: flex;
@@ -752,9 +753,7 @@ img {
   min-height: 110px;
   max-height: 110px;
   gap: 10px;
-}
-.weather__forecast-list::-webkit-scrollbar {
-  display: none;
+  scrollbar-width: none;
 }
 .weather__forecast-item {
   display: flex;
