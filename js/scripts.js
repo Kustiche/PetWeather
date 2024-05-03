@@ -6,6 +6,7 @@ import { gettingName } from "./deleteFavorites.js";
 import { gettingCityName, cityName } from "./gettingCityName.js";
 import { favoriteWeatherSearch } from "./favoriteWeatherSearch.js";
 import { closeModal } from "./closeModal.js";
+import { gettingLocalData } from "./localStorageData.js";
 
 form.addEventListener("submit", (e) => {
   gettingCityName(e);
@@ -25,3 +26,5 @@ favoritesList.addEventListener("click", (e) => {
 modalError.addEventListener("click", (e) => {
   closeModal(e);
 });
+
+gettingLocalData();

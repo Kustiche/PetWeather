@@ -1,4 +1,5 @@
 import { deleteFavorites } from "./deleteFavorites.js";
+import { localStorageData } from "./localStorageData.js";
 import { cities, favoritesButtonIcon, favoritesItem, favoritesList } from "./view.js";
 
 export const favoritesCollection = new Set();
@@ -9,9 +10,11 @@ export function checkFavoriteCity(name) {
   if (isCollectionCityName) {
     favoritesButtonIcon.classList.remove("active");
     deleteFavorites(name);
+    localStorageData();
   } else {
     favoritesButtonIcon.classList.add("active");
     favoritesCollection.add(name);
+    localStorageData();
   }
 }
 
